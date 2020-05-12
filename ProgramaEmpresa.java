@@ -15,6 +15,8 @@ public class ProgramaEmpresa {
 
         do {
 
+            System.out.println("Bem vindo ao Sistema de Cadastros");
+            System.out.println("---------------------------------");
             System.out.println("Selecione uma opção: ");
             System.out.println("1 - Criar empresa: ");
             System.out.println("2 - Criar pessoa: ");
@@ -87,8 +89,8 @@ public class ProgramaEmpresa {
 
                 if(temcarro == 1){
                     System.out.println("Modelo Carro: ");
-                    //Carro carro = leitor.next();
-                    //pes.setCarro(carro);
+                    String carro = leitor.next();
+                    pes.setCarro(carro);
                     
                     listaPessoa.add(pes);
 
@@ -160,15 +162,16 @@ public class ProgramaEmpresa {
 
                    System.out.println("Selecione a empresa que deseja efetuar a demissão: ");
 
-                   
 
-                    for (int contador = 0; contador < listaPessoa.size(); contador++) {
+
+                    for (int contador = 0; contador < listaFuncionarios.size(); contador++) {
      
-                    Pessoa pessoaTemporaria = (Pessoa) listaPessoa.get(contador);
-                    System.out.println("[Nome]: " + pessoaTemporaria.getNome());
-                    System.out.println("[Endereço]: " + pessoaTemporaria.getEndereco());
-                    System.out.println("[Telefone]: " + pessoaTemporaria.getTelefone());
-                    System.out.println("[Data de Nascimento]: " + pessoaTemporaria.getNascimento());
+                    Pessoa funcionarioTemporario = (Pessoa) listaFuncionarios.get(contador);
+                    System.out.println("[Nome]: " + funcionarioTemporario.getNome());
+                    System.out.println("[Endereço]: " + funcionarioTemporario.getEndereco());
+                    System.out.println("[Telefone]: " + funcionarioTemporario.getTelefone());
+                    System.out.println("[Data de Nascimento]: " + funcionarioTemporario.getNascimento());
+                    System.out.println("[Matrícula]: " + funcionarioTemporario.getMatricula());
                     System.out.println("-------------------------------------------------------");
                     }       
                     
